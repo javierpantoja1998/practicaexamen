@@ -4,6 +4,7 @@ import axios from 'axios';
 import HijoCustomer from './HijoCustomer';
 
 export default class Customers extends Component {
+    selector = React.createRef();
 
     state = {
       customers: [],

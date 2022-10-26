@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { NavLink } from 'react-router-dom'
 
 export default class MenuRutas extends Component {
     render() {
@@ -14,13 +15,10 @@ export default class MenuRutas extends Component {
                         {/* <!-- Links --> */}
                         <ul class="navbar-nav">
                             <li className="nav-item bg-danger">
-                                <a className="nav-link text-light" href="#">Link 1</a>
+                                <NavLink className="nav-link text-light" to="/">Home</NavLink>
                             </li>
                             <li className="nav-item bg-danger">
-                                <a className="nav-link text-light" href="#">Link 2</a>
-                            </li>
-                            <li className="nav-item bg-danger ">
-                                <a className="nav-link text-light" href="#" >Link 3</a>
+                                <NavLink className="nav-link text-light" to="/customers">Clientes</NavLink>
                             </li>
                         </ul>
                     </div>

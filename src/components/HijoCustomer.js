@@ -10,8 +10,7 @@ export default class HijoCustomer extends Component {
 
     cargarCliente = () => {
         var id = this.props.id;
-        console.log(id);
-        var request = "/customers.json/" + id;
+        var request = "/customers/"+ id + ".json/" ;
         var url = Global.urlCustomers + request;
 
     }
