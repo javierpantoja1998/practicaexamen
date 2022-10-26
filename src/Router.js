@@ -11,7 +11,7 @@ export default class Router extends Component {
                 <MenuRutas />
                 <Routes>
                     <Route path='/' element={<Customer/>} />
-
+                    
 
 
                 </Routes>

@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import Global from '../Global';
 import axios from 'axios';
+import HijoCustomer from './HijoCustomer';
 
-export default class Customer extends Component {
+export default class Customers extends Component {
 
     state = {
       customers: [],
@@ -14,8 +15,9 @@ export default class Customer extends Component {
       var url = Global.urlCustomers + request;
       axios.get(url).then(response => {
         this.setState({
-          customers:response.data,
-          status:true
+          customers:response.data.results,
+          status:true,
+          
         });
       });
 
@@ -33,7 +35,7 @@ export default class Customer extends Component {
 
                 {
                   this.state.customers.map((clientes, index)=>{
-                    return(<option key={index}>a</option>)
+                    return(<option key={index}>{clientes.contactName}</option>)
                   })
                 }
 
